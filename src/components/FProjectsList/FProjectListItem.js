@@ -1,8 +1,11 @@
 import React from 'react';
+import FProjectsListItemHolder from './FProjectListItem.style.js';
 
-const FProjectsListItem = () => {
+const FProjectsListItem = ({project}) => {
 	return (
-		<p>Hello from FProjectsListItem.js</p>
+		<FProjectsListItemHolder>
+			<h4>{project.name}</h4> {project.watchers_count}
+		</FProjectsListItemHolder>
 	)
 }
 

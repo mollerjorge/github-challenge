@@ -1,10 +1,10 @@
 import React from 'react';
 import SidebarHolder from './Sidebar.style.js';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
 	return (
 		<SidebarHolder>
-			Hello from sidebar
+			{props.children}
 		</SidebarHolder>
 
 	)

@@ -5,7 +5,7 @@ const SidebarHolder = styled.div`
 	flex-basis: 25%;
 	background: #f7f7f7;
 	height: 100vh;
-
+	overflow: scroll;
 `;
 
 export default SidebarHolder;

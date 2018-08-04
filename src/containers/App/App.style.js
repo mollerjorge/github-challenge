@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const AppHolder = styled.div`
 
 	*,
-	body,
 	*::after,
 	*::before {
 	  margin: 0;
