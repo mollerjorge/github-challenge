@@ -2,10 +2,11 @@ import { FETCH_PROJECTS, FETCH_PROJECTS_SUCCESS, FETCH_PROJECTS_FAIL, GET_CONTRI
 import { getProjects } from './actions';
 import axios from 'axios';
 import { put, takeLatest, call } from 'redux-saga/effects';
+import {axiosInstance} from '../../settings/config';
 
 export function fetchProjectsCall() {
 	
-	return axios.get('https://api.github.com/users/Facebook/repos')
+	return axiosInstance.get('/users/Facebook/repos')
 					.then(
 							res => {
 							 return {response: res.data}

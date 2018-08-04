@@ -1,14 +1,15 @@
 import React from "react";
+import ContributorHolder from './Contributor.style.js';
 
 const Contributor = ({ contributor: { login, avatar_url, contributions } }) => {
 	return (
-		<div>
-			<img width="80px" src={avatar_url} alt="user avatar" />
-			<div style={{display: 'inline-block'}}>
+		<ContributorHolder>
+			<img width="50px" src={avatar_url} alt="user avatar" />
+			<div style={{marginLeft: '2rem'}}>
 				<h3> {login}</h3>
 				<span>Contributions: {contributions}</span>
 			</div>
-		</div>
+		</ContributorHolder>
 	);
 };
 

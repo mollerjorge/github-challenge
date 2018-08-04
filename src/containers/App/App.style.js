@@ -1,18 +1,8 @@
 import styled from 'styled-components';
 
 const AppHolder = styled.div`
-
-	*,
-	*::after,
-	*::before {
-	  margin: 0;
-	  padding: 0;
-	  box-sizing: border-box;
-	}
-
-	min-height: 100vh;
-	display: flex;
-	justify-content: space-between;
+	
+	font-family: 'Montserrat', sand-serif;
 	
 `;
 
