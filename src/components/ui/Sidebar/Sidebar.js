@@ -1,10 +1,12 @@
 import React from 'react';
 import SidebarHolder from './Sidebar.style.js';
 
-const Sidebar = (props) => {
+const Sidebar = ({children, onChangeSearchInput}) => {
 	return (
 		<SidebarHolder>
-			{props.children}
+			<input type="text" onChange={onChangeSearchInput}/>
+
+			{children}
 		</SidebarHolder>
 
 	)
