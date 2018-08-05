@@ -1,18 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './containers/App/App';
-import store from './redux/store';
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router} from 'react-router-dom';
-
-
-
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./containers/App/App";
+import store from "./redux/store";
+import { Provider } from "react-redux";
+import "antd/dist/antd.css";
 
 ReactDOM.render(
 	<Provider store={store}>
-		<Router >
-			<App />
-		</Router>
-	</Provider>
-	, document.getElementById('root'));
-
+		<App />
+	</Provider>,
+	document.getElementById("root")
+);

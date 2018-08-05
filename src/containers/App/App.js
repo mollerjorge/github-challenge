@@ -1,60 +1,46 @@
 import React, { Component } from "react";
-import FProject from "../../components/FProject/FProject";
-import FProjectListItem from "../../components/FProjectsList/FProjectListItem";
-import AppHolder from "./App.style.js";
 import { connect } from "react-redux";
+
+// Actions
 import {
   getProjects,
   setProject,
   getContributors,
   setSearchValue
 } from "../../redux/FProjects/actions";
-import { Route } from "react-router-dom";
-import { withRouter } from "react-router";
+
+// Components
+import FProject from "../../components/FProject/FProject";
+import FProjectsList from "../../components/FProjectsList/FProjectsList";
+import FetchList from "../FetchList/FetchList";
+
+// UI Components
+import AppHolder from "./App.style.js";
 import { Layout, Input, Icon } from "antd";
-import "antd/dist/antd.css";
 const { Sider, Content } = Layout;
 
 class App extends Component {
-  componentDidMount() {
-    this.props.getProjects();
-  }
-
-  sortProjectsByWatchers = (p1, p2) => {
-    return p2.watchers_count - p1.watchers_count;
-  };
-
   onClickProjectHandler = (id, name, events) => {
     this.props.setProject(this.props.projects.filter(p => p.id === id)[0]);
-
     this.props.getContributors(name);
   };
 
-  onChangeSearchInput = events => {
-    const value = events.target.value;
+  onChangeSearchInput = ({ target: { value } }) => {
     this.props.setSearchValue(value);
   };
 
   render() {
-    const displayProjects = this.props.projects
-      .sort(this.sortProjectsByWatchers)
-      .map(p => {
-        if (
-          p.name.toLowerCase().includes(this.props.searchValue.toLowerCase())
-        ) {
-          return (
-            <FProjectListItem
-              onClickProjectHandler={this.onClickProjectHandler}
-              key={p.id}
-              project={p}
-            />
-          );
-        }
-      });
+    const {
+      getProjects,
+      searchValue,
+      onClickProjectHandler,
+      currentProject,
+      contributors
+    } = this.props;
     return (
       <AppHolder>
-        <Layout style={{ height: "100vh", overflow: 'scroll' }}>
-          <Sider width="20rem" height="100vh" style={{overflow: 'scroll'}}>
+        <Layout style={{ height: "100vh", overflow: "scroll" }}>
+          <Sider width="20rem" height="100vh" style={{ overflow: "scroll", background: '#262a34' }}>
             <Input
               placeholder="Search Projects"
               onChange={this.onChangeSearchInput}
@@ -62,17 +48,25 @@ class App extends Component {
               size="large"
               style={{ margin: "1rem", width: "18rem" }}
             />
-
-            {displayProjects}
+            <FetchList
+              getList={getProjects}
+              render={props => {
+                return <FProjectsList
+                  searchValue={searchValue}
+                  onClickProjectHandler={this.onClickProjectHandler}
+                  projects={props.projects}
+                />;
+              }}
+            />
           </Sider>
 
           <Layout>
-            <Content style={{padding: '5rem'}}>
-              {this.props.currentProject &&
-                this.props.contributors && (
+            <Content style={{ padding: "5rem" }}>
+              {currentProject &&
+                contributors && (
                   <FProject
-                    contributors={this.props.contributors}
-                    project={this.props.currentProject}
+                    contributors={contributors}
+                    project={currentProject}
                   />
                 )}
             </Content>
@@ -99,4 +93,4 @@ export default connect(mapStateToProps, {
   setProject,
   getContributors,
   setSearchValue
-})(withRouter(App));
+})(App);

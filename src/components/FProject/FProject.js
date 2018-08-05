@@ -1,6 +1,6 @@
 import React from "react";
 import FProjectHolder from "./FProject.style.js";
-import Contributor from "../Contributor/Contributor";
+import ContributorsList from "../Contributor/ContributorsList";
 import { Icon } from "antd";
 
 const FProject = ({ project, contributors }) => {
@@ -18,9 +18,7 @@ const FProject = ({ project, contributors }) => {
 			</div>
 			<p>{project.description}</p>
 			<hr></hr>
-			<ul className="contributors-list">
-				{contributors.map(c => <Contributor key={c.id} contributor={c} />)}
-			</ul>
+			<ContributorsList contributors={contributors} />
 		</FProjectHolder>
 	);
 };
