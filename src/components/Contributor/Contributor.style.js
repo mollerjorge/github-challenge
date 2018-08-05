@@ -11,6 +11,8 @@ const ContributorHolder = styled.div`
 		height: 5rem;
 	}
 
+	
+
 `;
 
 export default ContributorHolder;

@@ -5,6 +5,10 @@ const FProejctHolder = styled.div`
 	background: #f9f9f9;
 	padding: 2rem;
 
+	hr {
+		opacity: .3;
+	}
+
 	.contributors-list {
 		padding: 0;
 	}

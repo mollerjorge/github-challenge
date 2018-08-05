@@ -1,7 +1,7 @@
 import React from "react";
 import ContributorHolder from './Contributor.style.js';
 
-const Contributor = ({ contributor: { login, avatar_url, contributions } }) => {
+const Contributor = ({ children: { login, avatar_url, contributions } }) => {
 	return (
 		<ContributorHolder>
 			<img width="50px" src={avatar_url} alt="user avatar" />
