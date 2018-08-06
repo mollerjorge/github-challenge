@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Debounce } from "react-throttle";
 
 // Actions
 import {
@@ -37,39 +38,59 @@ class App extends Component {
       currentProject,
       contributors
     } = this.props;
+
+    let content = "";
+    if (currentProject && contributors) {
+      content = (
+        <FProject contributors={contributors} project={currentProject} />
+      );
+    } else {
+      content = (
+        <div
+          style={{
+            position: "absolute",
+            transform: "translate(-50%,-50%)",
+            top: "50%",
+            left: "50%"
+          }}
+        >
+          Please select a project from the sidebar
+        </div>
+      );
+    }
     return (
       <AppHolder>
         <Layout style={{ height: "100vh", overflow: "scroll" }}>
-          <Sider width="20rem" height="100vh" style={{ overflow: "scroll", background: '#262a34' }}>
-            <Input
-              placeholder="Search Projects"
-              onChange={this.onChangeSearchInput}
-              suffix={<Icon type="search" />}
-              size="large"
-              style={{ margin: "1rem", width: "18rem" }}
-            />
+          <Sider
+            width="20rem"
+            height="100vh"
+            style={{ overflow: "scroll", background: "#262a34" }}
+          >
+            <Debounce time="500" handler="onChange">
+              <Input
+                placeholder="Search Projects"
+                onChange={this.onChangeSearchInput}
+                suffix={<Icon type="search" />}
+                size="large"
+                style={{ margin: "1rem", width: "18rem" }}
+              />
+            </Debounce>
             <FetchList
               getList={getProjects}
               render={props => {
-                return <FProjectsList
-                  searchValue={searchValue}
-                  onClickProjectHandler={this.onClickProjectHandler}
-                  projects={props.projects}
-                />;
+                return (
+                  <FProjectsList
+                    searchValue={searchValue}
+                    onClickProjectHandler={this.onClickProjectHandler}
+                    projects={props.projects}
+                  />
+                );
               }}
             />
           </Sider>
 
           <Layout>
-            <Content style={{ padding: "5rem" }}>
-              {currentProject &&
-                contributors && (
-                  <FProject
-                    contributors={contributors}
-                    project={currentProject}
-                  />
-                )}
-            </Content>
+            <Content style={{ padding: "5rem", position: "relative" }}>{content}</Content>
           </Layout>
         </Layout>
       </AppHolder>

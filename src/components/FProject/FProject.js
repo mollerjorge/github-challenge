@@ -8,7 +8,7 @@ const FProject = ({ project, contributors }) => {
 		<FProjectHolder>
 			<div style={{ display: "flex", justifyContent: 'space-between', alignItems: 'center' }}>
 				<h1>{project.name}</h1>
-
+				<h2>{contributors.length}</h2>
 				<div>
 					<span><Icon type="warning"/>&nbsp;{project.open_issues_count}</span>
 					&nbsp;&nbsp;
@@ -18,7 +18,7 @@ const FProject = ({ project, contributors }) => {
 			</div>
 			<p>{project.description}</p>
 			<hr></hr>
-			<ContributorsList contributors={contributors} />
+			<ContributorsList projectId={project.id} contributors={contributors} />
 		</FProjectHolder>
 	);
 };
