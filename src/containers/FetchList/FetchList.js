@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
 /* 
  Reusable component that fetches generic lists
@@ -9,31 +9,24 @@ import { connect } from 'react-redux';
  In this case the entity is projects
 */
 class FetchList extends Component {
-
 	componentDidMount() {
 		this.props.getList();
 	}
 
 	render() {
-		
-		return (
-		 	<React.Fragment>
-				{this.props.render(this.props)}
-			</React.Fragment>
-		)
+		return <React.Fragment>{this.props.render(this.props)}</React.Fragment>;
 	}
-
 }
 
 /*
 	If another entity needs to be fetched, it should be added to the props via mapStateToProps function
 	(convention over configuration)
 */
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
 	return {
 		projects: state.ProjectReducer.projects
 		/*Add as much entities as needed here*/
-	}
-}
+	};
+};
 
 export default connect(mapStateToProps, null)(FetchList);

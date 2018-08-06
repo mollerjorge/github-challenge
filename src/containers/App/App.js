@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Debounce } from "react-throttle";
 
@@ -34,7 +35,6 @@ class App extends Component {
     const {
       getProjects,
       searchValue,
-      onClickProjectHandler,
       currentProject,
       contributors
     } = this.props;
@@ -90,13 +90,22 @@ class App extends Component {
           </Sider>
 
           <Layout>
-            <Content style={{ padding: "5rem", position: "relative" }}>{content}</Content>
+            <Content style={{ padding: "5rem", position: "relative" }}>
+              {content}
+            </Content>
           </Layout>
         </Layout>
       </AppHolder>
     );
   }
 }
+
+App.propTypes = {
+  getProjects: PropTypes.func.isRequired,
+  searchValue: PropTypes.string,
+  currentProject: PropTypes.object,
+  contributors: PropTypes.array
+};
 
 const mapStateToProps = ({
   ProjectReducer: { projects, currentProject, contributors, searchValue }

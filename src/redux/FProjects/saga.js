@@ -1,5 +1,4 @@
 import { FETCH_PROJECTS, FETCH_PROJECTS_SUCCESS, FETCH_PROJECTS_FAIL, GET_CONTRIBUTORS, GET_CONTRIBUTORS_SUCCESS, GET_CONTRIBUTORS_FAIL } from './types';
-import { getProjects } from './actions';
 import axios from 'axios';
 import { put, takeLatest, call } from 'redux-saga/effects';
 import {axiosInstance} from '../../settings/config';
