@@ -1,0 +1,539 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FProject renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FProject
+    contributors={
+        Array [
+            Object {
+              "avatar_url": "http://mockurl.com",
+              "contributions": 4,
+              "login": "george",
+            },
+            Object {
+              "avatar_url": "http://mockurl.com",
+              "contributions": 5,
+              "login": "camille",
+            },
+          ]
+    }
+    project={
+        Object {
+            "description": "this is a mock description",
+            "forks_count": 10,
+            "name": "this is a mock project",
+            "open_issues_count": 4,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <div
+          style={
+                    Object {
+                              "alignItems": "center",
+                              "display": "flex",
+                              "justifyContent": "space-between",
+                            }
+          }
+>
+          <h1>
+                    this is a mock project
+          </h1>
+          <div>
+                    <span>
+                              <Icon
+                                        type="warning"
+                              />
+                               
+                              4
+                    </span>
+                      
+                    <span>
+                              <Icon
+                                        type="fork"
+                              />
+                               
+                              10
+                    </span>
+          </div>
+</div>,
+        <p>
+          this is a mock description
+</p>,
+        <hr />,
+        <ContributorsList
+          contributors={
+                    Array [
+                              Object {
+                                "avatar_url": "http://mockurl.com",
+                                "contributions": 4,
+                                "login": "george",
+                              },
+                              Object {
+                                "avatar_url": "http://mockurl.com",
+                                "contributions": 5,
+                                "login": "camille",
+                              },
+                            ]
+          }
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              this is a mock project
+</h1>,
+            <div>
+              <span>
+                            <Icon
+                                          type="warning"
+                            />
+                             
+                            4
+              </span>
+                
+              <span>
+                            <Icon
+                                          type="fork"
+                            />
+                             
+                            10
+              </span>
+</div>,
+          ],
+          "style": Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "space-between",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "this is a mock project",
+            },
+            "ref": null,
+            "rendered": "this is a mock project",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span>
+                  <Icon
+                                    type="warning"
+                  />
+                   
+                  4
+</span>,
+                "  ",
+                <span>
+                  <Icon
+                                    type="fork"
+                  />
+                   
+                  10
+</span>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <Icon
+                      type="warning"
+/>,
+                    " ",
+                    4,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "type": "warning",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  " ",
+                  4,
+                ],
+                "type": "span",
+              },
+              "  ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <Icon
+                      type="fork"
+/>,
+                    " ",
+                    10,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "type": "fork",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  " ",
+                  10,
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "this is a mock description",
+        },
+        "ref": null,
+        "rendered": "this is a mock description",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "contributors": Array [
+            Object {
+              "avatar_url": "http://mockurl.com",
+              "contributions": 4,
+              "login": "george",
+            },
+            Object {
+              "avatar_url": "http://mockurl.com",
+              "contributions": 5,
+              "login": "camille",
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <div
+            style={
+                        Object {
+                                    "alignItems": "center",
+                                    "display": "flex",
+                                    "justifyContent": "space-between",
+                                  }
+            }
+>
+            <h1>
+                        this is a mock project
+            </h1>
+            <div>
+                        <span>
+                                    <Icon
+                                                type="warning"
+                                    />
+                                     
+                                    4
+                        </span>
+                          
+                        <span>
+                                    <Icon
+                                                type="fork"
+                                    />
+                                     
+                                    10
+                        </span>
+            </div>
+</div>,
+          <p>
+            this is a mock description
+</p>,
+          <hr />,
+          <ContributorsList
+            contributors={
+                        Array [
+                                    Object {
+                                      "avatar_url": "http://mockurl.com",
+                                      "contributions": 4,
+                                      "login": "george",
+                                    },
+                                    Object {
+                                      "avatar_url": "http://mockurl.com",
+                                      "contributions": 5,
+                                      "login": "camille",
+                                    },
+                                  ]
+            }
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                this is a mock project
+</h1>,
+              <div>
+                <span>
+                                <Icon
+                                                type="warning"
+                                />
+                                 
+                                4
+                </span>
+                  
+                <span>
+                                <Icon
+                                                type="fork"
+                                />
+                                 
+                                10
+                </span>
+</div>,
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "display": "flex",
+              "justifyContent": "space-between",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "this is a mock project",
+              },
+              "ref": null,
+              "rendered": "this is a mock project",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    <Icon
+                                        type="warning"
+                    />
+                     
+                    4
+</span>,
+                  "  ",
+                  <span>
+                    <Icon
+                                        type="fork"
+                    />
+                     
+                    10
+</span>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <Icon
+                        type="warning"
+/>,
+                      " ",
+                      4,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "type": "warning",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    " ",
+                    4,
+                  ],
+                  "type": "span",
+                },
+                "  ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <Icon
+                        type="fork"
+/>,
+                      " ",
+                      10,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "type": "fork",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    " ",
+                    10,
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "this is a mock description",
+          },
+          "ref": null,
+          "rendered": "this is a mock description",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "contributors": Array [
+              Object {
+                "avatar_url": "http://mockurl.com",
+                "contributions": 4,
+                "login": "george",
+              },
+              Object {
+                "avatar_url": "http://mockurl.com",
+                "contributions": 5,
+                "login": "camille",
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

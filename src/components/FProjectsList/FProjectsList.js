@@ -15,7 +15,7 @@ const FProjectsList = ({ projects, onClickProjectHandler, searchValue }) => {
           />
         );
       } else {
-        return <React.Fragment key={p.id}/>
+        return <React.Fragment key={p.id} />;
       }
     });
   return <React.Fragment>{displayProjectsList}</React.Fragment>;

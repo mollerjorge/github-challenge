@@ -21,7 +21,7 @@ import AppHolder from "./App.style.js";
 import { Layout, Input, Icon } from "antd";
 const { Sider, Content } = Layout;
 
-class App extends Component {
+export class App extends Component {
   onClickProjectHandler = (id, name, events) => {
     this.props.setProject(this.props.projects.filter(p => p.id === id)[0]);
     this.props.getContributors(name);
@@ -47,6 +47,7 @@ class App extends Component {
     } else {
       content = (
         <div
+          className="content-text"
           style={{
             position: "absolute",
             transform: "translate(-50%,-50%)",

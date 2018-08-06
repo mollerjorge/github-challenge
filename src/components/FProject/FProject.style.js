@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const FProejctHolder = styled.div`
 	min-height: 100vh
@@ -13,5 +13,7 @@ const FProejctHolder = styled.div`
 		padding: 0;
 	}
 `;
+
+FProejctHolder.displayName = "FProejctHolder";
 
 export default FProejctHolder;

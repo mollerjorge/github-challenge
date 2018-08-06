@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import Contributor from "./Contributor";
 import { List } from "react-virtualized";
 import "react-virtualized/styles.css";
@@ -46,6 +46,6 @@ class ContributorsList extends React.Component {
 
 ContributorsList.propTypes = {
 	contributors: PropTypes.array.isRequired
-}
+};
 
 export default ContributorsList;

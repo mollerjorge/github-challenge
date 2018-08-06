@@ -1,7 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const AppHolder = styled.div`
-	font-family: 'Montserrat', sand-serif;
-`;
+const AppHolder = styled.div`font-family: "Montserrat", sand-serif;`;
 
 export default AppHolder;
